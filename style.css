@@ -1,0 +1,230 @@
+/* Custom Properties for Dark/Light Mode */
+:root {
+    --bg-color: #f0f4f8;
+    --text-color: #333;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --primary-color: #6a0dad; /* Purple accent */
+    --nav-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0b0f19;
+    --text-color: #ffffff;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --primary-color: #a855f7;
+    --nav-bg: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling feature */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--nav-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Section Layout (Photo Left, Text Right) */
+.home-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.profile-card {
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(135deg, var(--primary-color), #4338ca);
+    border-radius: 20px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.code-icon {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.home-text h3 {
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.secondary-btn {
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Grid Layout for other sections */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-card { grid-column: span 2; }
+.skills-card { grid-column: span 1; }
+.edu-card, .proj-card, .hobbies-card, .ach-card, .contact-card {
+    grid-column: span 1;
+}
+.contact-card { grid-column: span 2; }
+
+.card h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Skills Progress Bar */
+.skill {
+    margin-bottom: 10px;
+}
+
+.progress {
+    background: #ddd;
+    border-radius: 5px;
+    height: 8px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    background: var(--primary-color);
+    height: 100%;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* 11. Responsive Design */
+@media (max-width: 900px) {
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-card, .skills-card, .contact-card {
+        grid-column: span 1;
+    }
+    .nav-links {
+        display: none; /* Mobile pe hide karne ke liye, simple approach */
+    }
+}

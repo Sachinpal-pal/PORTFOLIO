@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Pal | Portfolio</title>
+    <!-- CSS Link (Agar alag file banao toh yahan link karna) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 10. Interactive Navigation -->
+    <nav class="navbar">
+        <div class="logo">&lt;/&gt; Sachin Pal</div>
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#hobbies"><i class="fas fa-heart"></i> Hobbies</a></li>
+            <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <!-- 9. Dark/Light Mode Toggle -->
+        <button id="theme-toggle" class="theme-btn">☀️ / 🌙</button>
+    </nav>
+
+    <main class="container">
+        <!-- 1. Home Section (Photo Side Mein) -->
+        <section id="home" class="home-section">
+            <div class="profile-card glass-panel">
+                <!-- YAHAN APNA PHOTO DAALNA -->
+                <img src="/Users/sachinpal/Downloads/WhatsApp Image 2026-11-01 at 15.48.23.jpeg" alt="Sachin Pal" class="profile-img">
+                <div class="code-icon">&lt;/&gt;</div>
+            </div>
+            
+            <div class="home-text">
+                <h1>Hi, I'm <br><span class="highlight">Sachin Pal</span></h1>
+                <h3>First-Year Computer Science Student</h3>
+                <p>Welcome to my portfolio website! Explore my journey, skills and projects.</p>
+                <div class="btn-group">
+                    <a href="#about" class="btn primary-btn">About Me &rarr;</a>
+                    <a href="#projects" class="btn secondary-btn">View Projects &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid for remaining sections -->
+        <div class="bento-grid">
+            
+            <!-- 2. About Me Section -->
+            <section id="about" class="card about-card glass-panel">
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <h3>A Passionate Web Developer & AI Enthusiast</h3>
+                <p>I'm Sachin Pal from Kushinagar, currently a B.Tech CSE (AI & ML) student at Bosscoder School of Technology. I love exploring new technologies, building agentic AI workflows, and developing web applications. My goal is to become a skilled software engineer and contribute to impactful tech.</p>
+            </section>
+
+            <!-- 4. Skills Section -->
+            <section id="skills" class="card skills-card glass-panel">
+                <h2><i class="fas fa-cogs"></i> My Skills</h2>
+                <div class="skill-list">
+                    <div class="skill"><span>HTML & CSS</span> <div class="progress"><div class="fill" style="width: 90%;"></div></div></div>
+                    <div class="skill"><span>JavaScript</span> <div class="progress"><div class="fill" style="width: 80%;"></div></div></div>
+                    <div class="skill"><span>Java & DSA</span> <div class="progress"><div class="fill" style="width: 85%;"></div></div></div>
+                    <div class="skill"><span>Python & API</span> <div class="progress"><div class="fill" style="width: 75%;"></div></div></div>
+                    <div class="skill"><span>Git & Unix</span> <div class="progress"><div class="fill" style="width: 80%;"></div></div></div>
+                </div>
+            </section>
+
+            <!-- 3. Education Section -->
+            <section id="education" class="card edu-card glass-panel">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="timeline">
+                    <h4>Bosscoder School of Technology</h4>
+                    <p>B.Tech CSE (AI & ML) | 2026 - 2030</p>
+                    <small>Degree awarded by SVSU</small>
+                    <hr>
+                    <h4>CBSE Board (Gorakhpur, UP)</h4>
+                    <p>Class 12th | Completed 2026</p>
+                </div>
+            </section>
+
+            <!-- 5. Projects Section -->
+            <section id="projects" class="card proj-card glass-panel">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <ul>
+                    <li><strong>Virasat Aakriti:</strong> Streamlit web app with Gemini API for OCR and image analysis.</li>
+                    <li><strong>ArbiMetal Nexus:</strong> Web app for commodity price tracking and market analytics.</li>
+                    <li><strong>Vox AI:</strong> Built for Multi-Model AI Hackathon 2026 (IIT Mandi).</li>
+                </ul>
+            </section>
+
+            <!-- 6. Hobbies Section -->
+            <section id="hobbies" class="card hobbies-card glass-panel">
+                <h2><i class="fas fa-heart"></i> Hobbies</h2>
+                <p>🏏 Playing Cricket</p>
+                <p>🌍 Exploring New Things</p>
+                <p>🎵 Listening to Music</p>
+            </section>
+
+            <!-- 7. Achievements Section -->
+            <section id="achievements" class="card ach-card glass-panel">
+                <h2><i class="fas fa-trophy"></i> Achievements</h2>
+                <ul>
+                    <li>Google Gemini Student Ambassador (Sem 2, 2026)</li>
+                    <li>Code-A-Nova Campus Ambassador</li>
+                    <li>TechX Quiz 2026 Certificate (IEEE RAS)</li>
+                </ul>
+            </section>
+
+            <!-- 8. Contact Section -->
+            <section id="contact" class="card contact-card glass-panel">
+                <h2><i class="fas fa-envelope"></i> Let's Connect</h2>
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- JS Link -->
+    <script src="script.js"></script>
+</body>
+</html>
